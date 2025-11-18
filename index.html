@@ -40,9 +40,10 @@
       document.getElementById('time').innerText = `${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString()}`
     }
 
+    displayDate()
     setInterval(() => {
       displayDate()
-    }, 1000)
+    }, 10000)
   </script>
 </body>
 
