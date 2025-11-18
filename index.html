@@ -15,6 +15,9 @@
       <h1>Painel de monitoramento de ramal</h1>
     </div>
     <div class="row">
+      <h2 id="time"></h2>
+    </div>
+    <div class="row">
       <div id="cartoes">
       </div>
     </div>
@@ -30,8 +33,17 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/monitoramento.js"></script>
+  <!-- <script src="js/monitoramento.js"></script> -->
+  <script type="text/javascript">
+    function displayDate() {
+      const d = new Date()
+      document.getElementById('time').innerText = `${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString()}`
+    }
 
+    setInterval(() => {
+      displayDate()
+    }, 1000)
+  </script>
 </body>
 
 </html>''
